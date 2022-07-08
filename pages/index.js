@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { Footer } from "../components/common";
+import { Footer, Navbar } from "../components/common";
 import styles from "../styles/Home.module.css";
 
 export default function Home() {
@@ -11,8 +11,8 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
+      <Navbar />
       <main className={styles.main}>Hello</main>
-
       <Footer />
     </div>
   );
