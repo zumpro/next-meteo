@@ -12,7 +12,7 @@ export default function Home() {
       </Head>
 
       <Navbar />
-      <main className={styles.main}>Hello</main>
+      <main className={styles.main}>Hello enter the name of the city</main>
       <Footer />
     </div>
   );
