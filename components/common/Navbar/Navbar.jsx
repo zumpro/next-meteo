@@ -1,16 +1,23 @@
 import React from "react";
 import s from "./Navbar.module.css";
-import { Container, Input, Logo } from "../../ui";
+import { Button, Container, Logo } from "../../ui";
+import Searchbar from "../Searchbar/Searchbar";
+import { LocationMarker } from "../../icon";
 const Navbar = () => {
   return (
     <header className={s.root}>
       <Container>
-        <div className="flex justify-between w-full">
+        <div className="flex justify-between items-center w-full">
           <div>
             <Logo />
           </div>
           <div>
-            <Input placeholder="Enter the city" />
+            <Searchbar />
+          </div>
+          <div>
+            <Button>
+              <LocationMarker />
+            </Button>
           </div>
         </div>
       </Container>

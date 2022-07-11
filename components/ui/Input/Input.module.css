@@ -1,4 +1,7 @@
 .root {
-    @apply bg-gray-300 rounded relative pl-3 py-1 pr-11;
-    width: 416px;
+    @apply bg-gray-200 rounded relative pl-3 py-1 pr-11 w-[470px] h-9;
+}
+
+.root:focus {
+  @apply outline-none;
 }
