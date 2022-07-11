@@ -1,12 +1,14 @@
-const Logo = () => (
+const Logo = ({ className = "", ...props }) => (
   <svg
     width="99"
     height="36"
     viewBox="0 0 99 36"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
+    className={className}
+    {...props}
   >
-    <g clipRath="url(#clip0_18_61)">
+    <g cliprath="url(#clip0_18_61)">
       <path
         opacity="0.969"
         fillRule="evenodd"

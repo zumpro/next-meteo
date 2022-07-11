@@ -1,14 +1,16 @@
 import React from "react";
 import s from "./Navbar.module.css";
-import { Logo } from "../../ui";
+import { Input, Logo } from "../../ui";
 const Navbar = () => {
   return (
     <header className={s.root}>
-      <div className="flex justify-between items-center">
+      <div className="flex">
         <div>
           <Logo />
         </div>
-        <div>Navbar</div>
+        <div>
+          <Input placeholder="Enter the city" />
+        </div>
       </div>
     </header>
   );
