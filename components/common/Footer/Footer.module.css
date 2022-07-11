@@ -1,3 +1,7 @@
 .root {
-    @apply border-t border-gray-500;
+   
+}
+
+.footerContainer {
+    @apply py-4 border-t border-gray-300 flex justify-between items-center;
 }
