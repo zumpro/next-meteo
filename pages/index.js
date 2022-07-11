@@ -1,5 +1,7 @@
 import Head from "next/head";
+
 import { Footer, Navbar } from "../components/common";
+import { Container } from "../components/ui";
 import styles from "../styles/Home.module.css";
 
 export default function Home() {
@@ -12,7 +14,9 @@ export default function Home() {
       </Head>
 
       <Navbar />
-      <main className={styles.main}>Hello enter the name of the city</main>
+      <Container>
+        <main className={styles.main}>Hello enter the name of the city</main>
+      </Container>
       <Footer />
     </div>
   );
