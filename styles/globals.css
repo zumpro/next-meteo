@@ -19,3 +19,6 @@ a {
 * {
   box-sizing: border-box;
 }
+.fit {
+  min-height: calc(100vh - 88px);
+}   

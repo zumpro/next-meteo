@@ -1,7 +1,9 @@
 .container {
   padding: 0 2rem;
 }
-
+.fit {
+  min-height: calc(100vh - 88px);
+}
 .main {
   min-height: 90vh;
   padding: 4rem 0;

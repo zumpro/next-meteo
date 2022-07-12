@@ -1,7 +1,8 @@
 import React from "react";
+import { Layout } from "../components/common";
 
-const forecast = () => {
+export default function Forecast() {
   return <div>forecast</div>;
-};
+}
 
-export default forecast;
+Forecast.Layout = Layout;
