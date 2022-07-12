@@ -20,7 +20,7 @@
 }
 
 .loading {
-  @apply bg-cyan-100 text-cyan-300 border-cyan-200 cursor-not-allowed;
+  @apply bg-[#11669e] text-white/60 cursor-not-allowed;
 }
 
 .flat {

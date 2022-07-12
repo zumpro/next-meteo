@@ -41,7 +41,7 @@ const Buttun = (props) => {
       {...rest}
     >
       {children}
-      {loading && <i className="pl-2 m-0 flex">Loading</i>}
+      {loading && <i className="pl-2 m-0 flex text-sm">Поиск...</i>}
     </Component>
   );
 };

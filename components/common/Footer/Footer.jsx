@@ -15,7 +15,7 @@ const Footer = () => {
           </div>
           <div className="text-gray-400 float-right">
             <span className="cursor-pointer underline hover:no-underline">
-              User agreement.
+              Пользовательское соглашение.
             </span>
             <span className="ml-1">Created by Andrew Chichvarin</span>
           </div>
