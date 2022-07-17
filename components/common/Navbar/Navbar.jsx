@@ -17,11 +17,12 @@ const Navbar = () => {
     router.push(
       {
         pathname: `/forecast`,
-        query: `lat=${latitude}&lon=${longitude}`,
+        query: `lat=${latitude.toFixed(6)}&lon=${longitude.toFixed(6)}`,
       },
       undefined,
       { shallow: true }
     );
+
     setLoading(false);
   };
 
