@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Layout } from "../components/common";
 import { useRouter } from "next/router";
 import { Container } from "../components/ui";
-import { ForecastCard } from "../components/forecast";
+import { ForecastCard, ForecastSummary } from "../components/forecast";
 
 export default function Forecast() {
   const [weatherData, setWeatherData] = useState([]);
@@ -50,8 +50,15 @@ export default function Forecast() {
           {weatherData == false ? (
             <div>Загрузка</div>
           ) : (
-            <div>
+            <div className="flex h-[300px] relative">
               <ForecastCard forecast={weatherData} />
+              <div className="flex flex-col w-1/2 justify-between">
+                {weatherData.list.map((days, index) => {
+                  if (index > 0) {
+                    return <ForecastSummary key={index} day={days} />;
+                  }
+                })}
+              </div>
             </div>
           )}
         </div>

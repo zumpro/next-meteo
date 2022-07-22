@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import s from "./Navbar.module.css";
+import Link from "next/link";
 import { Button, Container, Logo } from "../../ui";
 import Searchbar from "../Searchbar/Searchbar";
 import { LocationMarker } from "../../icon";
@@ -31,7 +32,11 @@ const Navbar = () => {
       <Container>
         <div className="flex justify-between items-center w-full">
           <div>
-            <Logo />
+            <Link href="/">
+              <a aria-label="Logo">
+                <Logo />
+              </a>
+            </Link>
           </div>
           <div>
             <Searchbar />

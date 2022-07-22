@@ -1,13 +1,24 @@
 .root {
     @apply relative overflow-hidden flex flex-col justify-between 
-    mr-2 font-normal p-5 w-2/4 shadow-lg rounded-md border border-gray-300;
+    mr-2 font-normal p-5 w-2/4 shadow-lg rounded-md  bg-[#48A7E6] text-white;
     height: 300px;
+    width: 50%;
 }
 
 .time {
-    @apply text-gray-500 text-sm;
+    @apply text-white/60 text-sm;
 }
 
+.temp {
+    @apply text-5xl inline-block align-top;
+}
 .tempVelue {
-    @apply text-5xl
+    @apply text-5xl;
+}
+.cardSubTitle {
+    @apply flex items-center text-white;
+}
+
+.feelings {
+ @apply inline-block align-top mt-1 ml-5;
 }
