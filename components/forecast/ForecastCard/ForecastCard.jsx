@@ -8,7 +8,6 @@ import s from "./ForecastCard.module.css";
 const ForecastCard = ({ forecast }) => {
   const { main, weather, dt_txt, wind } = forecast.list[0];
 
-  console.log(Math.round(wind.deg));
   return (
     <div className={s.root}>
       <div className="flex justify-between items-start">

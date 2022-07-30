@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Layout } from "../components/common";
 import { useRouter } from "next/router";
 import { Container } from "../components/ui";
-import { ForecastCard, ForecastSummary } from "../components/forecast";
+import { ForecastCard, ForecastSummary, SunCard } from "../components/forecast";
 
 export default function Forecast() {
   const [weatherData, setWeatherData] = useState([]);
@@ -28,7 +28,7 @@ export default function Forecast() {
       let req = `${process.env.NEXT_PUBLIC_API_URL + howToSearch}
         &appid=${
           process.env.NEXT_PUBLIC_API_KEY
-        }&lang=ru&units=metric&cnt=5&exclude=hourly,minutely`;
+        }&lang=ru&units=metric&cnt=9&exclude=hourly,minutely`;
 
       let res = await fetch(req.replace(/ /g, ""));
       let data = await res.json();
@@ -50,14 +50,22 @@ export default function Forecast() {
           {weatherData == false ? (
             <div>Загрузка</div>
           ) : (
-            <div className="flex h-[300px] relative">
-              <ForecastCard forecast={weatherData} />
-              <div className="flex flex-col w-1/2 justify-between">
-                {weatherData.list.map((days, index) => {
-                  if (index > 0) {
-                    return <ForecastSummary key={index} day={days} />;
-                  }
-                })}
+            <div>
+              <div className="flex h-[300px] relative mb-2">
+                <ForecastCard forecast={weatherData} />
+                <SunCard city={weatherData.city} />
+              </div>
+              <div className="mb-2 p-4 rounded border border-[#48A7E6] ">
+                <div>
+                  <h2 className="font-medium text-xl">Прогноз каждые 3 часа</h2>
+                </div>
+                <ul className="relative w-full h-full flex justify-between">
+                  {weatherData.list.map((days, index) => {
+                    if (index > 0) {
+                      return <ForecastSummary key={index} day={days} />;
+                    }
+                  })}
+                </ul>
               </div>
             </div>
           )}

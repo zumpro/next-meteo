@@ -1,0 +1,6 @@
+.root {
+        @apply relative overflow-hidden flex flex-col justify-between 
+       font-normal p-5 w-2/4 rounded-md  border border-[#48A7E6] h-full;
+    height: 300px;
+    width: 50%;
+}

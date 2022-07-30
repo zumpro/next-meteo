@@ -1,28 +1,20 @@
 .root {
-    @apply border border-[#48A7E6] w-full rounded py-2 px-4 flex items-center relative h-16;
+    @apply relative rounded my-1 h-auto basis-28 w-full border border-transparent;
 }
 
 .root:hover {
-    @apply bg-[#48A7E6] text-white cursor-pointer shadow-lg;
+    @apply border border-[#48A7E6] cursor-pointer shadow-lg;
 }
 .tempVelue {
-    @apply text-base font-semibold;
+    @apply text-lg font-semibold mb-2;
 }
-.time {
-    @apply absolute top-[2px] text-xs text-black/40;
-}
+
 .grandLevel {
    @apply text-xs text-black/40; 
 }
 .humidity {
    @apply text-xs text-black/40; 
 }
-.root:hover .grandLevel{
-    @apply text-white/50
-}
-.root:hover .time{
-    @apply text-white/50
-}
-.root:hover .humidity{
-    @apply text-white/50
+.time {
+    @apply text-sm text-gray-400 w-20
 }
