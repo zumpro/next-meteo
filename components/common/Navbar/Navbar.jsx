@@ -3,7 +3,7 @@ import s from "./Navbar.module.css";
 import Link from "next/link";
 import { Button, Container, Logo } from "../../ui";
 import Searchbar from "../Searchbar/Searchbar";
-import { LocationMarker } from "../../icon";
+import { LocationMarker, Search } from "../../icon";
 import { useRouter } from "next/router";
 
 const Navbar = () => {
@@ -38,7 +38,7 @@ const Navbar = () => {
               </a>
             </Link>
           </div>
-          <div>
+          <div className="md:flex hidden">
             <Searchbar />
           </div>
           <div>
