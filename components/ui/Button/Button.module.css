@@ -1,6 +1,6 @@
 .root {
   @apply bg-[#48A7E6] text-white rounded cursor-pointer inline-flex
-  px-10 py-3 leading-6 transition ease-in-out duration-150
+  px-5 py-3 leading-6 transition ease-in-out duration-150
   shadow-sm text-center justify-center 
   border border-transparent items-center text-base font-semibold
   tracking-wide;

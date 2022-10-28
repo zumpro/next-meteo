@@ -25,24 +25,26 @@ export default function Home() {
   };
 
   return (
-    <div className=" relative flex flex-col justify-center w-full pt-20">
-      <div className="text-center w-[720px] m-auto">
-        <h1 className="text-5xl font-bold text-gray-300">
-          Введите название города, чтобы узнать погоду
-        </h1>
-        <p className="text-2xl font-normal text-gray-300 mt-4">
-          или нажмите на кнопку
-        </p>
-      </div>
-      <div className="inline-block w-full text-center pt-10">
-        <Button
-          loading={loading}
-          onClick={() => {
-            navigator.geolocation.getCurrentPosition(myIP);
-          }}
-        >
-          Моё местоположение
-        </Button>
+    <div className="absolute w-full h-full flex items-center">
+      <div className=" relative w-full">
+        <div className="text-center max-w-[720px] m-auto px-4 md:px-0">
+          <h1 className="text-3xl md:text-5xl font-bold text-gray-300">
+            Введите название города, чтобы узнать погоду
+          </h1>
+          <p className="text-lg md:text-2xl font-normal text-gray-300 mt-4">
+            или нажмите на кнопку
+          </p>
+        </div>
+        <div className="inline-block w-full text-center pt-10">
+          <Button
+            loading={loading}
+            onClick={() => {
+              navigator.geolocation.getCurrentPosition(myIP);
+            }}
+          >
+            Моё местоположение
+          </Button>
+        </div>
       </div>
     </div>
   );

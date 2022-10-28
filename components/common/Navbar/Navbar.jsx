@@ -41,7 +41,13 @@ const Navbar = () => {
           <div className="md:flex hidden">
             <Searchbar />
           </div>
-          <div>
+
+          <div className="flex items-center">
+            <div className="md:hidden flex mr-6">
+              <Button>
+                <Search />
+              </Button>
+            </div>
             <Button
               loading={loading}
               onClick={() => {

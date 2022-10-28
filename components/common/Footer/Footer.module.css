@@ -3,5 +3,6 @@
 }
 
 .footerContainer {
-    @apply py-4 border-t border-gray-300 flex justify-between items-center;
+    @apply py-4 xl:px-0 px-4 sm:justify-between sm:flex-row  flex-col justify-center flex items-center;
 }
+
