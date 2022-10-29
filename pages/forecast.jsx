@@ -30,7 +30,7 @@ export default function Forecast() {
           process.env.NEXT_PUBLIC_API_KEY
         }&lang=ru&units=metric&cnt=9&exclude=hourly,minutely`;
 
-      console.log(process.env.NEXT_PUBLIC_API_URL);
+      console.log(process.env.API_URL);
       let res = await fetch(req.replace(/ /g, ""));
       let data = await res.json();
 
