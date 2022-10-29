@@ -30,18 +30,10 @@ export default function Forecast() {
           process.env.NEXT_PUBLIC_API_KEY
         }&lang=ru&units=metric&cnt=9&exclude=hourly,minutely`;
 
-      console.log(
-        "Key:",
-        process.env.NEXT_PUBLIC_API_KEY,
-        "Url:",
-        process.env.NEXT_PUBLIC_API_URL,
-        "keyS:",
-        process.env.APIS_KEY,
-        "keySN:",
-        process.env.NEXT_PUBLIC_APIS_KEY
-      );
       let res = await fetch(req.replace(/ /g, ""));
+      console.log(res);
       let data = await res.json();
+      console.log(data);
 
       setWeatherData(data);
       setCity(`${data.city.name}`);
