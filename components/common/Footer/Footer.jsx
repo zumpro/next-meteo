@@ -1,6 +1,6 @@
 import React from "react";
 import { Github } from "../../icon";
-import { Container, Logo } from "../../ui";
+import { Container } from "../../ui";
 import s from "./Footer.module.css";
 
 const Footer = () => {
@@ -15,7 +15,7 @@ const Footer = () => {
           </div>
           <div className="text-gray-400 float-right flex sm:flex-row  flex-col">
             <span className="">Created by Andrew Chichvarin</span>
-            <span className="cursor-pointer underline hover:no-underline sm:ml-1 ">
+            <span className="cursor-pointer underline hover:no-underline sm:ml-1">
               Пользовательское соглашение.
             </span>
           </div>
