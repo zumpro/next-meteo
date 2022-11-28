@@ -23,9 +23,6 @@ export default function Home() {
 
     setLoading(false);
   };
-  let info = process.env.NEXT_PUBLIC_ICON_URL;
-
-  console.log(info);
 
   return (
     <div className="absolute w-full h-full flex items-center">
