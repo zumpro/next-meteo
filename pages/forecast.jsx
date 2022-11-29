@@ -74,7 +74,7 @@ export default function Forecast() {
                 <div>
                   <h2 className="font-medium text-xl">Прогноз каждые 3 часа</h2>
                 </div>
-                <ul className="relative w-full h-full flex justify-between mb-5 md:mb-0">
+                <ul className="relative w-full h-full flex mb-5 md:mb-0 flex-wrap">
                   {weatherData.list.map((days, index) => {
                     if (index > 0) {
                       return <ForecastSummary key={index} day={days} />;
