@@ -66,7 +66,7 @@ export default function Forecast() {
             <div>Загрузка</div>
           ) : (
             <div>
-              <div className="flex h-[300px] relative mb-2">
+              <div className="block  relative mb-2  md:flex">
                 <ForecastCard forecast={weatherData} />
                 <SunCard city={weatherData.city} />
               </div>
@@ -74,7 +74,7 @@ export default function Forecast() {
                 <div>
                   <h2 className="font-medium text-xl">Прогноз каждые 3 часа</h2>
                 </div>
-                <ul className="relative w-full h-full flex justify-between">
+                <ul className="relative w-full h-full flex justify-between mb-5 md:mb-0">
                   {weatherData.list.map((days, index) => {
                     if (index > 0) {
                       return <ForecastSummary key={index} day={days} />;

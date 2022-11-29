@@ -1,8 +1,8 @@
 .root {
     @apply relative overflow-hidden flex flex-col justify-between 
-    mr-2 font-normal p-5 w-2/4 shadow-lg rounded-md  bg-[#48A7E6] text-white;
+    mr-2 font-normal p-5 md:w-2/4 w-full mb-5 md:mb-0 shadow-lg rounded-md  bg-[#48A7E6] text-white;
     height: 300px;
-    width: 50%;
+    
 }
 
 .time {
