@@ -11,7 +11,7 @@ const Head = () => {
       />
       <link rel="manifest" href="/site.webmanifest" key="site-manifest" />
       <meta
-        http-equiv="Content-Security-Policy"
+        httpEquiv="Content-Security-Policy"
         content="upgrade-insecure-requests"
       />
     </SEO>
