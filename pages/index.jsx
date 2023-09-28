@@ -6,22 +6,43 @@ import { Button } from "../components/ui";
 export default function Home() {
   const router = useRouter();
 
-  // Button State
+  // Состояние кнопки
   const [loading, setLoading] = useState(false);
 
-  const myIP = (location) => {
-    setLoading(true);
-    const { latitude, longitude } = location.coords;
-    router.push(
-      {
-        pathname: `/forecast`,
-        query: `lat=${latitude.toFixed(6)}&lon=${longitude.toFixed(6)}`,
-      },
-      undefined,
-      { shallow: true }
-    );
+  // Функция для получения геолокации пользователя
+  const fetchUserLocation = async () => {
+    try {
+      setLoading(true);
+      const location = await getCurrentLocation();
+      const { latitude, longitude } = location.coords;
 
-    setLoading(false);
+      // Перенаправление на страницу с прогнозом погоды с координатами пользователя
+      router.push(
+        {
+          pathname: `/forecast`,
+          query: `lat=${latitude.toFixed(6)}&lon=${longitude.toFixed(6)}`,
+        },
+        undefined,
+        { shallow: true }
+      );
+    } catch (error) {
+      // Обработка ошибок, например, если геолокация недоступна
+      console.error("Ошибка при получении геолокации:", error);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  // Функция для асинхронного получения текущей геолокации пользователя
+  const getCurrentLocation = () => {
+    return new Promise((resolve, reject) => {
+      navigator.geolocation.getCurrentPosition(
+        // Если успешно получена геолокация
+        (position) => resolve(position),
+        // Если произошла ошибка
+        (error) => reject(error)
+      );
+    });
   };
 
   return (
@@ -36,12 +57,7 @@ export default function Home() {
           </p>
         </div>
         <div className="inline-block w-full text-center pt-10">
-          <Button
-            loading={loading}
-            onClick={() => {
-              navigator.geolocation.getCurrentPosition(myIP);
-            }}
-          >
+          <Button loading={loading} onClick={fetchUserLocation}>
             Моё местоположение
           </Button>
         </div>
